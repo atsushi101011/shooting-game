@@ -4,27 +4,28 @@
     <meta charset="utf-8">
     <title>シューティングゲーム</title>
 </head>
+	
 <body>
     <canvas id="canvas" width="800" height="600" style="background-color: black;"></canvas>
 
 <script>
-var canvas = document.getElementById("canvas"); // Canvasを取得
-var ctx = canvas.getContext("2d"); // CanvasからContextを取得
+　　var canvas = document.getElementById("canvas"); // Canvasを取得
+　　var ctx = canvas.getContext("2d"); // CanvasからContextを取得
 
-var key = Array(5);  //配列変数
-let KEY_RIGHT =0;
-let KEY_LEFT  =1;
-let KEY_UP    =2;
-let KEY_DOWN  =3;
-let KEY_Z     =4;
-key[KEY_RIGHT] =0;
-key[KEY_LEFT]  =0;
-key[KEY_UP]	   =0;
-key[KEY_DOWN]  =0;
-key[KEY_Z]     =0;
+　　var key = Array(5);  //配列変数
+　　let KEY_RIGHT =0;
+　　let KEY_LEFT  =1;
+　　let KEY_UP    =2;
+　　let KEY_DOWN  =3;
+　　let KEY_Z     =4;
+　　key[KEY_RIGHT] =0;
+　　key[KEY_LEFT]  =0;
+　　key[KEY_UP]	   =0;
+　　key[KEY_DOWN]  =0;
+　　key[KEY_Z]     =0;
 
-class Enemy {
-    constructor(x,y,angle,kind){
+　　class Enemy {
+    　constructor(x,y,angle,kind){
         this.kind = kind;
         this.BULLET_NUM = 3;
         this.bullet = Array(this.BULLET_NUM);
