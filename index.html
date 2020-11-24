@@ -29,26 +29,29 @@
         this.kind = kind;
         this.BULLET_NUM = 3;
         this.bullet = Array(this.BULLET_NUM);
+	     
         for(var i = 0;i < 5;i++) {
-			this.bullet[i] = new Bullet();
-		}
-		this.x = x; // X座標
-		this.y = y; // Y座標
-		this.width = 32; // 幅
-		this.height = 32; // 高さ
-		this.angle = angle; // 角度
-		this.spd = 3; // 速度
-		this.cnt = 0; // カウンタ
-    }
+		　　this.bullet[i] = new Bullet();
+	}
+	     
+	this.x = x; // X座標
+	this.y = y; // Y座標
+	this.width = 32; // 幅
+	this.height = 32; // 高さ
+	this.angle = angle; // 角度
+	this.spd = 3; // 速度
+	this.cnt = 0; // カウンタ
+    　}
 
-    getBulletNum(){
-        for(var i=0; i<this.BULLET_NUM; i++){
-            if(!this.bullet[i].exist){
-                return i;
-            }
+    	getBulletNum(){
+        	for(var i=0; i<this.BULLET_NUM; i++){
+            	　　if(!this.bullet[i].exist){
+                　　return i;
+            　　　}
         }
         return -1;
     }
+	  
     shot() {
 		if(this.cnt % 20 == 0) { // 20カウントずつ発射
 			var num = this.getBulletNum(); // 発射されてない弾の番号を取得
